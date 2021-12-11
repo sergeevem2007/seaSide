@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-default;
+	font-size: 16px;
+	color: $dark;
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.main {
+	min-height: 100vh;
+	display: flex;
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+
+		&--31vw {
+			width: 31vw;
+		}
+	
+		&--34vw {
+			width: 34.5vw;
+		}
+	}
+
+	&__cell {
+		height: 50vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		&--girl {
+			background-image: url(/assets/img/main-girl.jpg);
+		}
+
+		&--blue-light {
+			background-color: $blue-light;
+		}
+
+		&--sea {
+			background-image: url(/assets/img/main-sea.jpg);
+		}
+
+		&--blue-dark {
+			background-color: $blue-dark;
+		}
+
+		&--39vh {
+			height: 39vh;
+		}
+
+		&--pool {
+			background-image: url(/assets/img/main-pool.jpg);
+		}
+	}
+
+	&__subtitle {
+		font-family: 'Inter-300';
+		font-size: 1.5rem;
+		line-height: 1.8125rem;
+		color: $gray;
+		text-align: center;
+	}
+	
+	&__content {
+		height: 61vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {
+		display: flex;
+		list-style: none;
+		padding-top: 62px;
+
+		li {
+			display: flex;
+			align-items: center;
+			
+			&::after {
+				content: '';
+				display: inline-flex;
+				align-items: center;
+				height: 21px;
+				width: 1px;
+				background-color: $dark;
+				margin-right: 6px;
+			}
+			
+			&:last-child {
+				
+				&::after {
+					content: '';
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__link	{
+		font-size: 1rem;
+		line-height: 1.125rem;
+		text-decoration: none;
+		color: $dark;
+		margin-right: 6px;
+		transition: color 0.4s ease-in-out;
+
+		&:hover {
+			color: $gray-dark;
+			transition: color 0.4s ease-in-out;
+		}
+	}
+
+	&__title {
+		font-family: 'Inter-600';
+		font-size: 3.125rem;
+		line-height: 3.4rem;
+		text-align: center;
+		margin-bottom: 130px;
+	}
+}
