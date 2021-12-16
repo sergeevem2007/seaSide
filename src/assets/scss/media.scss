@@ -1,0 +1,239 @@
+@media (max-width:1140px) {
+
+  .main {
+
+    &__title {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+  }
+}
+@media (max-width:900px) {
+  
+  .main {
+    
+    &__col {
+        
+      &--31vw {
+        width: 33vw;
+      }
+    
+      &--34vw {
+        width: 33.5vw;
+      }
+    }
+
+    &__cell {
+
+      &--39vh {
+        height: 43vh;
+      }
+    }
+
+    &__content {
+      height: 57vh;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+      padding-top: 24px;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  
+
+  .rooms {
+    .title {
+      grid-area: title;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .video {
+      grid-area: video;
+    }
+    
+    .description {
+      grid-area: description;
+    }
+
+    min-height: 100vh;
+    padding: 40px 30px;
+    display: grid;
+    grid-template-columns: 1fr 33vw;
+    column-gap: 58px;
+    grid-template-rows: 33vw;
+    grid-template-areas: "title video"
+                          "title description";
+
+    &__inner {
+      height: 33vw;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &__video {
+      height: 33vw;
+      width: 100%;
+    }
+
+    &__wrapper {
+      margin-bottom: 0;
+      min-height: initial;
+    }
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3.375rem;
+      margin-top: 39px;
+    }
+
+    &__text {
+      margin-top: 56px;
+      max-width: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      height: 33vw;
+
+      &--mask {
+        display: none;
+      }
+    } 
+  }
+
+  .gallery {
+    padding: 40px;
+    background-color: $blue-dark;
+
+    &__wrapper {
+      height: calc(100vh - 80px);
+      padding: 60px 39px 85px 28px;
+    }
+
+    &__inner {
+      width: 100%;
+      height: 100%;
+      background: url(/assets/img/gallery-people.jpg) center right/48% 100% no-repeat;
+    }
+
+    &__title {
+      font-size: 2.375rem;
+      line-height: 2.625rem;
+      max-width: 75%;
+      margin-top: 40px;
+    }
+  }
+
+  
+  .contacts {
+    display: none;
+
+    &__text {
+      margin: 0 30px;
+    }
+
+    &__cell {
+      
+      &--pool {
+        height: 50vh;
+      }
+
+      &--sand {
+        height: 33vh;
+      }
+    }
+    
+    &__nav {
+      flex-direction: row;
+      margin: 0;
+      align-self: center;
+
+      li {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__link {
+      margin-bottom: 0;  
+    }
+  }
+
+  .contacts-tablet {
+    display: flex;
+    min-height: 100vh;
+    background-color: $gray;
+
+    .title {
+      grid-area: title;
+      display: flex;
+      align-items: center;
+
+      &__title {
+        font-family: "Inter-600";
+        font-size: 3.125rem;
+        line-height: 3.5rem;
+        margin-left: 25px;
+      }
+    }
+
+    .blue-dark {
+      grid-area: blue-dark;
+    }
+
+    .blue-light {
+      grid-area: blue-light;
+    }
+    
+    .lounge {
+      grid-area: lounge;
+    }
+
+    &__left {
+      width: 67vw;
+      min-height: 100vh;
+      display: grid;
+      grid-template-areas: "title title"
+                            "blue-dark lounge"
+                            "blue-light lounge";
+      grid-template-columns: 52% 48%;
+      grid-template-rows: 29vh 1fr 1fr;
+    }
+
+    &__right {
+      width: 33vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 17vh;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  
+}
+
+@media (min-width:320px) and (max-width:575px) {
+  
+}

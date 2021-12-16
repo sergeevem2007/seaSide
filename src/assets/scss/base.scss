@@ -112,6 +112,10 @@ body {
 		}
 	}
 
+	&__burger {
+		display: none;
+	}
+
 	&__link	{
 		font-size: 1rem;
 		line-height: 1.125rem;
@@ -228,7 +232,7 @@ body {
 		font-family: "Inter-300";
 		font-size: 1.125rem;
 		line-height: 1.375rem;
-		max-width: 349px;
+		max-width: 33%;
 		margin-top: 35px;
 	}
 
@@ -379,4 +383,8 @@ body {
 			}
 		}
 	}
+}
+
+.contacts-tablet {
+	display: none;
 }
