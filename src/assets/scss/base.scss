@@ -139,13 +139,64 @@ body {
 	padding: 80px;
 	background-color: $gray;
 
-	&__video {
+	&__inner {
 		height: 33vh;
 		width: 31vw;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-left: 40px;
+		position: relative;
+
+		::after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			width: 50px;
+			height: 50px;
+			background-image: url(/assets/img/rooms-play.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__video {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 33vh;
+		width: 31vw;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	&__play {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: "Inter-600";
+		font-size: 1.56rem;
+		font-size: 1.7em;
+		color: $dark;
+		text-decoration: none;
+		background-color: rgba($light, 0.75);
+		opacity: 0;
+		transition: opacity 0.4s ease-in-out;
+		
+		&:hover {
+			opacity: 1;
+			transition: opacity 0.4s ease-in-out;
+		}
 	}
 
 	&__wrapper {
