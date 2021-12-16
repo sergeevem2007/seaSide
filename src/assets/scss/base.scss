@@ -236,7 +236,96 @@ body {
 		max-width: 70%;
 		color: #fff;
 		mix-blend-mode: difference;
+	}
+}
 
-		
+.contacts {
+	display: grid;
+	min-height: 100vh;
+	grid-template-columns: 34.3vw 1fr 1fr 1fr;
+	grid-template-rows: 50vh;
+
+	&__cell {
+		display: flex;
+		align-items: center;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		&--gray {
+			background-color: $gray;
+		}
+
+		&--pool {
+			background-image: url(/assets/img/contacts-pool.jpg);
+		}
+
+		&--blue-light {
+			background-color: $blue-light;
+		}
+
+		&--lounge {
+			background-image: url(/assets/img/contacts-lounge.jpg);
+		}
+
+		&--blue-dark {
+			background-color: $blue-dark;
+		}
+
+		&--sand {
+			background-image: url(/assets/img/contacts-sand.jpg);
+		}
+	}
+
+	&__title {
+		font-family: 'Inter-600';
+		font-size: 3.125rem;
+		line-height: 3.4rem;
+		margin-top: 30px;
+		margin-left: 60px;
+	}
+
+	&__text {
+		font-family: "Inter-300";
+		font-size: 1.125rem;
+		line-height: 1.325rem;
+		color: $gray;
+		margin: 0 38px;
+	}
+
+	&__nav {
+		display: flex;
+		align-self: flex-end;
+		flex-direction: column;
+		list-style: none;
+		margin-left: 60px;
+		margin-bottom: 60px;
+
+		&--mr {
+			margin-left: auto;
+			margin-right: 60px;	
+		}
+	}
+
+	&__link	{
+		display: inline-block;
+		font-size: 1rem;
+		line-height: 1.125rem;
+		text-decoration: none;
+		color: $dark;
+		margin-bottom: 10px;
+		transition: color 0.4s ease-in-out;
+
+		&:hover {
+			color: $gray-dark;
+			transition: color 0.4s ease-in-out;
+
+			svg {
+				fill: $gray-dark;
+				rect {
+					stroke: $gray-dark;
+				}
+			}
+		}
 	}
 }
