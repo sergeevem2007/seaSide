@@ -114,6 +114,8 @@ body {
 
 	&__burger {
 		display: none;
+		border: none;
+		outline: none;
 	}
 
 	&__link	{
@@ -364,6 +366,7 @@ body {
 
 	&__link	{
 		display: inline-block;
+		font-family: "Inter-300";
 		font-size: 1rem;
 		line-height: 1.125rem;
 		text-decoration: none;
@@ -387,4 +390,80 @@ body {
 
 .contacts-tablet {
 	display: none;
+}
+
+.modal {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba($blue-dark, 0.25);
+	transition: opacity 0.4s ease-in-out, margin-left 0.4s ease-in-out;
+	&__body {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 320px;
+		margin-left: -320px;
+		padding: 40px;
+		background-color: $light;
+		box-shadow: 2px 0px 15px 2px rgba($dark, 0.15);
+		transition: margin-left 0.4s ease-in-out;
+	}
+
+	&__title {
+		font-family: "Inter-600";
+		font-size: 1.625rem;
+		line-height: 1.8rem;
+		margin-bottom: 30px;
+	}
+	
+	&__nav {
+		display: flex;
+		align-self: flex-end;
+		flex-direction: column;
+		list-style: none;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 1px;
+			background-color: $dark;
+			margin-top: 15px;
+			margin-bottom: 30px;
+		}
+
+		&--row {
+			flex-direction: row;
+			&::after {
+				content: "";
+				display: none;
+			}
+		}
+	}
+
+	&__link	{
+		display: inline-block;
+		font-size: 1rem;
+		line-height: 1.125rem;
+		text-decoration: none;
+		color: $dark;
+		margin-bottom: 15px;
+		margin-right: 10px;
+		transition: color 0.4s ease-in-out;
+
+		&:hover {
+			color: $gray-dark;
+			transition: color 0.4s ease-in-out;
+		}
+	}
+}
+
+.modal-open {
+	overflow: hidden;
+  position: fixed;
 }
