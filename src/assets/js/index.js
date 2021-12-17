@@ -35,8 +35,6 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', (event) => {
-    event.preventDefault();
-    
     const blockID = anchor.getAttribute('href').substr(1);
     
     document.getElementById(blockID).scrollIntoView({
@@ -69,12 +67,12 @@ mainBurgerMobile.addEventListener('click', () => {
 });
 
 modal.addEventListener('click', (event) => {
+  console.log(event.target)
   if (event.target.closest('.modal__link')) {
     modalBody.style.marginLeft = "-100vw";
     body.classList.remove('modal-open');
     
     setTimeout( () => {
-      
       modal.style.visibility = "hidden";
       modal.style.opacity = "0";
     }, 350);  

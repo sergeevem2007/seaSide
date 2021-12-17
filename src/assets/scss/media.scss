@@ -378,6 +378,9 @@
 @media (min-width:320px) and (max-width:575px) {
   .modal {
     
+    &__body {
+      width: 100vw;
+    }
     &__title {
       text-align: center;
     }
