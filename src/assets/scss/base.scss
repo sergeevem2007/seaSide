@@ -18,8 +18,7 @@ body {
 
 .main {
 	min-height: 100vh;
-	display: flex;
-
+	
 	&__col {
 		display: flex;
 		flex-direction: column;
@@ -139,6 +138,14 @@ body {
 		text-align: center;
 		margin-bottom: 130px;
 	}
+}
+
+.main-tablet-desctop {
+	display: flex;
+}
+
+.main-mobile {
+	display: none;
 }
 
 .rooms {
@@ -265,6 +272,10 @@ body {
 	}
 }
 
+.rooms-mobile {
+	display: none;
+}
+
 .gallery {
 	padding: 80px;
 	min-height: 100vh;
@@ -297,11 +308,8 @@ body {
 }
 
 .contacts {
-	display: grid;
 	min-height: 100vh;
-	grid-template-columns: 34.3vw 1fr 1fr 1fr;
-	grid-template-rows: 50vh;
-
+	
 	&__cell {
 		display: flex;
 		align-items: center;
@@ -388,7 +396,18 @@ body {
 	}
 }
 
+.contacts-desctop {
+	display: grid;
+	grid-template-columns: 34.3vw 1fr 1fr 1fr;
+	grid-template-rows: 50vh;
+	min-height: 100vh;
+}
+
 .contacts-tablet {
+	display: none;
+}
+
+.contacts-mobile {
 	display: none;
 }
 
@@ -407,7 +426,7 @@ body {
 		top: 0;
 		bottom: 0;
 		width: 320px;
-		margin-left: -320px;
+		margin-left: -100vw;
 		padding: 40px;
 		background-color: $light;
 		box-shadow: 2px 0px 15px 2px rgba($dark, 0.15);

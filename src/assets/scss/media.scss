@@ -52,6 +52,9 @@
   
 
   .rooms {
+    min-height: 100vh;
+    padding: 40px 30px;
+    
     .title {
       grid-area: title;
       display: flex;
@@ -66,14 +69,15 @@
       grid-area: description;
     }
 
-    min-height: 100vh;
-    padding: 40px 30px;
-    display: grid;
-    grid-template-columns: 1fr 33vw;
-    column-gap: 58px;
-    grid-template-rows: 33vw;
-    grid-template-areas: "title video"
+    
+    &__tablet-desctop {
+        display: grid;
+      grid-template-columns: 1fr 33vw;
+      column-gap: 58px;
+      grid-template-rows: 33vw;
+      grid-template-areas: "title video"
                           "title description";
+    }
 
     &__inner {
       height: 33vw;
@@ -95,6 +99,7 @@
       font-size: 3rem;
       line-height: 3.375rem;
       margin-top: 39px;
+      margin-bottom: 39px;
     }
 
     &__text {
@@ -137,8 +142,7 @@
 
   
   .contacts {
-    display: none;
-
+    
     &__text {
       margin: 0 30px;
     }
@@ -171,6 +175,10 @@
     &__link {
       margin-bottom: 0;  
     }
+  }
+
+  .contacts-desctop {
+    display: none;
   }
 
   .contacts-tablet {
@@ -230,10 +238,161 @@
   }
 }
 
-@media (max-width:576px) {
-  
+@media (max-width:670px) {
+  .main {
+    min-height: initial;
+    background-color: $gray;
+    position: relative;
+
+    &__burger {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      margin-top: 0;
+    }
+
+    &__cell {
+      height: 62.5vw;
+    }
+
+    &__title {
+      font-size: 1.625rem;
+      line-height: 1.8rem;
+      margin: 22px 0;
+      text-align: center;   
+    }
+
+  }
+
+  .main-mobile {
+    display: block;
+  }
+
+  .main-tablet-desctop {
+    display: none;
+  }
+
+  .rooms {
+    min-height: initial;
+    padding: 30px 20px;
+    background-color: $light;
+
+    &__title {
+      font-size: 1.625rem;
+      line-height: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      margin: 30px 15px;
+      font-family: "Inter-300";
+      font-size: 0.875rem;
+      line-height: 1.1rem;
+    }
+
+    &__inner,
+    &__video,
+    &__img {
+      height: 200px;
+    }
+  }
+
+  .rooms-tablet-desctop {
+    display: none;
+  }
+
+  .rooms-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery {
+    padding: 0;
+
+    &__wrapper {
+      height: 100vh;
+      padding: 0;
+    }
+
+    &__inner {
+      background: url(/assets/img/gallery-people.jpg) center right/75vw 85vw no-repeat;
+    }
+
+    &__title {
+      position: relative;
+      bottom: -35vw;
+      margin-top: 0;
+      margin-left: 20px;
+      font-size: 1.375rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .contacts {
+    min-height: initial;
+    background-color: $gray;
+
+    &__cell {
+      width: 100%;
+      height: 62.5vw;
+    }
+
+    &__title {
+      font-size: 1.625rem;
+      line-height: 1.8rem;
+      margin: 30px 20px;
+    }
+
+    &__wrapper {
+      display: flex;
+      
+      .contacts__cell {
+        width: 50%;
+        height: 50vw;
+      }
+    }
+
+    &__text {
+      margin: 0 20px;
+      font-family: "Inter-300";
+      font-size: 0.875rem;
+      line-height: 1.1rem;
+    }
+
+    &__nav {
+      padding: 19px 0;
+      justify-content: center;
+    }
+  }
+
+  .contacts-tablet {
+    display: none;
+  }
+
+  .contacts-mobile {
+    display: block;
+  }
 }
 
 @media (min-width:320px) and (max-width:575px) {
-  
+  .modal {
+    
+    &__title {
+      text-align: center;
+    }
+
+    &__nav {
+      justify-content: center;
+
+      &::after {
+        margin: 15px auto 30px auto;
+      }
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
